@@ -3,21 +3,36 @@ package com.app.getsettravel;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.DatePicker;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 public class BookingDetails extends AppCompatActivity {
+
+    Spinner roomType, noOfRooms, checkInTime, noOfNights;
+    DatePicker checkInDate;
+    String hotelName;
+    Float basePrice;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_booking_details);
+
+        /***
+         *
+         * Initializing the values passed from the Hotel page***/
+        Intent intent = getIntent();
+        hotelName = intent.getStringExtra("");
+        basePrice = intent.getFloatExtra("",1000);
 
         /***
          *
@@ -35,7 +50,7 @@ public class BookingDetails extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String list = parent.getItemAtPosition(position).toString();
-                Toast.makeText(parent.getContext(), "Selected: " + list, Toast.LENGTH_LONG).show();
+                Toast.makeText(parent.getContext(), "Selected: " + list, Toast.LENGTH_SHORT).show();
             }
             @Override
             public void onNothingSelected(AdapterView <?> parent) {
@@ -59,7 +74,7 @@ public class BookingDetails extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 int no = (int) parent.getItemAtPosition(position);
-                Toast.makeText(parent.getContext(), "Selected: " + no, Toast.LENGTH_LONG).show();
+                Toast.makeText(parent.getContext(), "Selected: " + no, Toast.LENGTH_SHORT).show();
             }
             @Override
             public void onNothingSelected(AdapterView <?> parent) {
@@ -80,7 +95,7 @@ public class BookingDetails extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String time = parent.getItemAtPosition(position).toString();
-                Toast.makeText(parent.getContext(), "Selected: " + time, Toast.LENGTH_LONG).show();
+                Toast.makeText(parent.getContext(), "Selected: " + time, Toast.LENGTH_SHORT).show();
             }
             @Override
             public void onNothingSelected(AdapterView <?> parent) {
@@ -106,7 +121,7 @@ public class BookingDetails extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 int nights = (int) parent.getItemAtPosition(position);
-                Toast.makeText(parent.getContext(), "Selected: " + nights, Toast.LENGTH_LONG).show();
+                Toast.makeText(parent.getContext(), "Selected: " + nights, Toast.LENGTH_SHORT).show();
             }
             @Override
             public void onNothingSelected(AdapterView <?> parent) {
@@ -114,10 +129,39 @@ public class BookingDetails extends AppCompatActivity {
         });
 
 
+        roomType = (Spinner)findViewById(R.id.spinner);
+        noOfRooms = (Spinner) findViewById(R.id.spinner2);
+        checkInDate = (DatePicker) findViewById(R.id.datePicker1);
+        checkInTime = (Spinner) findViewById(R.id.spinner3);
+        noOfNights = (Spinner) findViewById(R.id.spinner4);
+
+    }
+
+    /**
+     *
+     * @param datePicker
+     * @return a java.util.Date
+     */
+    public static java.util.Date getDateFromDatePicker(DatePicker datePicker){
+        int day = datePicker.getDayOfMonth();
+        int month = datePicker.getMonth();
+        int year =  datePicker.getYear();
+
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(year, month, day);
+
+        return calendar.getTime();
     }
 
     public void viewAmount(View view) {
         Intent myIntent = new Intent(BookingDetails.this, Amount.class);
+        myIntent.putExtra("HOTEL_NAME",hotelName);
+        myIntent.putExtra("BASE_PRICE",basePrice);
+        myIntent.putExtra("ROOM_TYPE",roomType.getSelectedItem().toString());
+        myIntent.putExtra("NO_OF_ROOMS",Integer.parseInt(noOfRooms.getSelectedItem().toString()));
+        myIntent.putExtra("CHECK_IN_DATE",getDateFromDatePicker(checkInDate).toString());
+        myIntent.putExtra("CHECK_IN_TIME",checkInTime.getSelectedItem().toString());
+        myIntent.putExtra("NO_OF_NIGHTS",Integer.parseInt(noOfNights.getSelectedItem().toString()));
         BookingDetails.this.startActivity(myIntent);
     }
 }

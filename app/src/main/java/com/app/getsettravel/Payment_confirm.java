@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Hotel_Lavonca_Colombo_Colombo extends AppCompatActivity {
+public class Payment_confirm extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hotel__lavonca__colombo__colombo);
+        setContentView(R.layout.activity_payment_confirm);
     }
 }

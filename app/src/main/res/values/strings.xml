@@ -83,4 +83,20 @@
     <string name="Thank">Thank You !</string>
     <string name="Button_Back">Back To Home</string>
     <string name="Button_Add_Review">Add Reviews</string>
+    <string name="btn_proceed">Proceed</string>
+
+
+    <array name="RoomTypes">
+        <item>Single</item>
+        <item>Double</item>
+        <item>Family</item>
+        <item>VIP Suite</item>
+    </array>
+    <array name="NoOfRooms">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </array>
 </resources>

@@ -15,17 +15,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PasswordReset"></activity>
+        <activity android:name=".RUDPayment"></activity>
+        <activity android:name=".Payment_confirm" />
+        <activity android:name=".PasswordReset" />
         <activity android:name=".UserAccount" />
         <activity android:name=".Registration" />
         <activity android:name=".BookingConfirm" />
         <activity android:name=".PaymentDetails" />
         <activity android:name=".AddHotelDetails" />
-        <activity android:name=".Hotel_Lavonca_Colombo_Colombo" />
-        <activity android:name=".Hotels_Colombo_Colombo" />
-        <activity android:name=".Cities_Colombo_Western" />
-        <activity android:name=".Districts_Western" />
-        <activity android:name=".Provinces" />
         <activity android:name=".AboutUs" />
         <activity
             android:name=".ui.login.LoginActivity"
