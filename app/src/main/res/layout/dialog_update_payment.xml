@@ -1,157 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <LinearLayout
+        android:layout_width="210dp"
+        android:layout_height="383dp"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView34"
-        android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/textView34"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Edit Payment Details"
+            android:textAlignment="center"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+
+        <TextView
+            android:id="@+id/x1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Card_Number"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/x2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/mon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Month"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/x3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/yr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Year"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/x4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/security"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Security_Number"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/x5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/holder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Card_holder"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/x6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/buttonUpdatePayment"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Update" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="230dp"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:text="Edit Booking"
-        android:textAlignment="center"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.482"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.072" />
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textViewUpdateCardNo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Card_Number"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.105"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.479" />
+        <TextView
+            android:id="@+id/x7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/x8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="18sp" />
 
-    <TextView
-        android:id="@+id/textViewUpdateMonth"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Mm"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.084"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.272" />
+        <EditText
+            android:id="@+id/editTextUpdateCardNo"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/Card_Number"
+            android:inputType="textPersonName" />
 
-    <TextView
-        android:id="@+id/textViewUpdateYear"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Yy"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.082"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.373" />
+        <EditText
+            android:id="@+id/editTextUpdateMonth"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/Mm"
+            android:inputType="textPersonName" />
 
-    <TextView
-        android:id="@+id/textViewUpdateSecurityNo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Security_Number"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.841"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.445" />
+        <EditText
+            android:id="@+id/editTextUpdateYear"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="YY"
+            android:inputType="textPersonName" />
 
-    <TextView
-        android:id="@+id/textViewUpdateCardHolderName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Card_holder"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.87"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.54" />
+        <EditText
+            android:id="@+id/editTextUpdateSecurityNo"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/Security_Number"
+            android:inputType="textPersonName" />
 
-    <Button
-        android:id="@+id/buttonUpdatePayment"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content"
-        android:text="Update"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.717" />
-
-    <EditText
-        android:id="@+id/editTextUpdateCardNo"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.363"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.25" />
-
-    <EditText
-        android:id="@+id/editTextUpdateMonth"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.938"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.33" />
-
-    <EditText
-        android:id="@+id/editTextUpdateYear"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.858" />
-
-    <EditText
-        android:id="@+id/editTextUpdateSecurityNo"
-        android:layout_width="0dp"
-        android:layout_height="24dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.929" />
+        <EditText
+            android:id="@+id/editTextUpdateCardHolderName"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/Card_holder"
+            android:inputType="textPersonName" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</LinearLayout>

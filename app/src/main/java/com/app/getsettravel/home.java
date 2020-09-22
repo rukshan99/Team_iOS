@@ -25,5 +25,9 @@ public class home extends AppCompatActivity {
         Intent myIntent = new Intent(home.this, Map.class);
         home.this.startActivity(myIntent);
     }
+    public void clickMyAccountButton(View view) {
+        Intent myIntent = new Intent(home.this, UserAccount.class);
+        home.this.startActivity(myIntent);
+    }
 
 }

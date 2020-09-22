@@ -53,6 +53,7 @@ public class PaymentDetails extends AppCompatActivity implements View.OnClickLis
         findViewById(R.id.button).setOnClickListener(this);
 
         mDatabase = openOrCreateDatabase(DATABASE_NAME, MODE_PRIVATE, null);
+        //createBookingDetailsTable();
     }
 
 
@@ -72,6 +73,8 @@ public class PaymentDetails extends AppCompatActivity implements View.OnClickLis
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
         String paymentDate = sdf.format(cal.getTime());
 
+        createBookingDetailsTable();
+
         String insertSQL = "INSERT INTO bookings \n" +
                 "(RoomType, NoOfRooms, CheckInDate, CheckInTime, NoOfNights, Amount, CardNumber, Month, Year, SecurityNumber, CardHolder, PaymentDate)\n" +
                 "VALUES \n" +
@@ -83,22 +86,11 @@ public class PaymentDetails extends AppCompatActivity implements View.OnClickLis
         Toast.makeText(this, "Booking and Payment details Saved!", Toast.LENGTH_SHORT).show();
     }
 
-    @Override
-    public void onClick(View view) {
-        addBookingDetails();
-
-        /***
-         *
-         * redirecting to RUD operations***///////////////////////////////////////////////////////////////
-        Intent myIntent = new Intent(PaymentDetails.this, RUDPayment.class);
-        PaymentDetails.this.startActivity(myIntent);
-    }
-
     private void createBookingDetailsTable(){
         mDatabase.execSQL(
                 "CREATE TABLE IF NOT EXISTS bookings (\n" +
-                        "    BookingId int NOT NULL CONSTRAINT employees_pk PRIMARY KEY AUTOINCREMENT,\n" +
-                        "    CustomerID int,\n" +
+                        "    BookingId INTEGER NOT NULL CONSTRAINT bookings_pk PRIMARY KEY AUTOINCREMENT,\n" +
+                        "    CustomerID integer,\n" +
                         "    Hotel varchar(200) ,\n" +
                         "    RoomType varchar(200) NOT NULL,\n" +
                         "    NoOfRooms int NOT NULL,\n" +
@@ -114,4 +106,17 @@ public class PaymentDetails extends AppCompatActivity implements View.OnClickLis
                         "    PaymentDate varchar(200) NOT NULL \n);"
         );
     }
+
+    @Override
+    public void onClick(View view) {
+        addBookingDetails();
+
+        /***
+         *
+         * redirecting to RUD operations***/
+        Intent myIntent = new Intent(PaymentDetails.this, BookingList.class);
+        PaymentDetails.this.startActivity(myIntent);
+    }
+
+
 }

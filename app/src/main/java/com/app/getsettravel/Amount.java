@@ -34,7 +34,7 @@ public class Amount extends AppCompatActivity {
         noOfNights = intent.getIntExtra("NO_OF_NIGHTS",1);
 
         TextView cost = (TextView)findViewById(R.id.textView35);
-        cost.setText((int) calculateBookingCost(basePrice, roomType, noOfRooms, noOfNights));
+        cost.setText(Float.toString(calculateBookingCost(basePrice, roomType, noOfRooms, noOfNights)));
     }
 
     public float calculateBookingCost(Float base_Price, String room_Type, Integer noOf_Rooms, Integer noOf_Nights){
@@ -48,7 +48,7 @@ public class Amount extends AppCompatActivity {
         else if(room_Type.equals("VIP Suite"))
             roomValueMultiplier = 5;
 
-        bookingCost = base_Price * roomValueMultiplier * noOf_Rooms * noOf_Nights;
+        bookingCost = (float) base_Price * roomValueMultiplier * noOf_Rooms * noOf_Nights;
         return bookingCost;
     }
 

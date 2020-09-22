@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -31,7 +32,7 @@ public class BookingDetails extends AppCompatActivity {
          *
          * Initializing the values passed from the Hotel page***/
         Intent intent = getIntent();
-        hotelName = intent.getStringExtra("");
+        hotelName = "aaa"; //intent.getStringExtra("");
         basePrice = intent.getFloatExtra("",1000);
 
         /***
@@ -154,6 +155,17 @@ public class BookingDetails extends AppCompatActivity {
     }
 
     public void viewAmount(View view) {
+        /*Button calculate = findViewById(R.id.button6);
+        calculate.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
+
+                Intent intent = new Intent(BookingDetails.this, Amount.class);
+                startActivity(intent);
+
+            }
+        });*/
         Intent myIntent = new Intent(BookingDetails.this, Amount.class);
         myIntent.putExtra("HOTEL_NAME",hotelName);
         myIntent.putExtra("BASE_PRICE",basePrice);
@@ -164,4 +176,5 @@ public class BookingDetails extends AppCompatActivity {
         myIntent.putExtra("NO_OF_NIGHTS",Integer.parseInt(noOfNights.getSelectedItem().toString()));
         BookingDetails.this.startActivity(myIntent);
     }
+
 }
