@@ -1,4 +1,4 @@
-package com.app.getsettravel;
+package com.app.getsettravel.model;
 
 public class ModelPayment {
 

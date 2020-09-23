@@ -79,11 +79,14 @@
     <string name="Button_SignOut">Sign Out</string>
 
     <string name="Success_Title">Success</string>
-    <string name="Success_Message">Your booking has been confirmed. Check your email for more details.</string>
-    <string name="Thank">Thank You !</string>
+    <string name="Success_Message">Your booking has sent for validation. You will be notified about the payment shortly.</string>
+    <string name="Thank">Thank You!</string>
     <string name="Button_Back">Back To Home</string>
     <string name="Button_Add_Review">Add Reviews</string>
     <string name="btn_proceed">Proceed</string>
+    <string name="channel_name">paymentSuccessful</string>
+    <string name="channel_description">Your payment details are validated and the payment is successful. Thank you.</string>
+    <string name="CHANNEL_ID">paymentConf</string>
 
 
     <array name="RoomTypes">

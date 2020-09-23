@@ -17,6 +17,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.app.getsettravel.model.ModelPayment;
+
 import java.util.List;
 
 public class BookingAdapter extends ArrayAdapter<ModelPayment> {
