@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="colorPrimary">#d6aa58</color>
+    <color name="colorPrimaryDark">#bd7b00</color>
+    <color name="colorAccent">#a86e00</color>
+    <color name="colorBackground">#f2c877 </color>
+    <color name="dialogBackground">#f7dd9e</color>
+
+    <color name="AdminColorPrimary">#1c86b0</color>
+    <color name="AdminColorPrimaryDark">#01587a</color>
+    <color name="AdminColorAccent">#01587a</color>
+    <color name="AdminColorBackground">#1a7bb8</color>
+
 </resources>

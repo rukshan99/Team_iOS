@@ -13,6 +13,7 @@ import android.widget.DatePicker;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 
@@ -38,7 +39,7 @@ public class BookingDetails extends AppCompatActivity {
         /***
          *
          * Inserting data to the Room Types spinner***/
-        Spinner spinner = findViewById(R.id.spinner);
+        roomType = findViewById(R.id.spinner);
         ArrayList<String> roomTypes = new ArrayList<>();
         roomTypes.add("Single");
         roomTypes.add("Double");
@@ -46,8 +47,8 @@ public class BookingDetails extends AppCompatActivity {
         roomTypes.add("VIP Suite");
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item, roomTypes);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(arrayAdapter);
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        roomType.setAdapter(arrayAdapter);
+        roomType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String list = parent.getItemAtPosition(position).toString();
@@ -61,7 +62,7 @@ public class BookingDetails extends AppCompatActivity {
         /***
          *
          * Inserting data to the No. of Rooms spinner***/
-        Spinner spinner2 = findViewById(R.id.spinner2);
+        noOfRooms = findViewById(R.id.spinner2);
         ArrayList<Integer> noRooms = new ArrayList<>();
         noRooms.add(1);
         noRooms.add(2);
@@ -70,8 +71,8 @@ public class BookingDetails extends AppCompatActivity {
         noRooms.add(5);
         ArrayAdapter<Integer> arrayAdapter2= new ArrayAdapter<Integer>(this, android.R.layout.simple_spinner_item, noRooms);
         arrayAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner2.setAdapter(arrayAdapter2);
-        spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        noOfRooms.setAdapter(arrayAdapter2);
+        noOfRooms.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 int no = (int) parent.getItemAtPosition(position);
@@ -85,14 +86,14 @@ public class BookingDetails extends AppCompatActivity {
         /***
          *
          * Inserting data to the Check-in Times spinner***/
-        Spinner spinner3 = findViewById(R.id.spinner3);
+        checkInTime = findViewById(R.id.spinner3);
         ArrayList<String> times = new ArrayList<>();
         times.add("11.00 a.m");
         times.add("6.00 p.m");
         ArrayAdapter<String> arrayAdapter3= new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, times);
         arrayAdapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner3.setAdapter(arrayAdapter3);
-        spinner3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        checkInTime.setAdapter(arrayAdapter3);
+        checkInTime.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String time = parent.getItemAtPosition(position).toString();
@@ -106,7 +107,7 @@ public class BookingDetails extends AppCompatActivity {
         /***
          *
          * Inserting data to the No. of Nights spinner***/
-        Spinner spinner4 = findViewById(R.id.spinner4);
+        noOfNights = findViewById(R.id.spinner4);
         ArrayList<Integer> noNights = new ArrayList<>();
         noNights.add(1);
         noNights.add(2);
@@ -117,8 +118,8 @@ public class BookingDetails extends AppCompatActivity {
         noNights.add(7);
         ArrayAdapter<Integer> arrayAdapter4= new ArrayAdapter<Integer>(this, android.R.layout.simple_spinner_item, noNights);
         arrayAdapter4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner4.setAdapter(arrayAdapter4);
-        spinner4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        noOfNights.setAdapter(arrayAdapter4);
+        noOfNights.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 int nights = (int) parent.getItemAtPosition(position);
@@ -130,42 +131,33 @@ public class BookingDetails extends AppCompatActivity {
         });
 
 
-        roomType = (Spinner)findViewById(R.id.spinner);
-        noOfRooms = (Spinner) findViewById(R.id.spinner2);
+       // roomType = (Spinner)findViewById(R.id.spinner);
+       // noOfRooms = (Spinner) findViewById(R.id.spinner2);
         checkInDate = (DatePicker) findViewById(R.id.datePicker1);
-        checkInTime = (Spinner) findViewById(R.id.spinner3);
-        noOfNights = (Spinner) findViewById(R.id.spinner4);
+       // checkInTime = (Spinner) findViewById(R.id.spinner3);
+        //noOfNights = (Spinner) findViewById(R.id.spinner4);
 
     }
-
+//java.util.Date
     /**
      *
      * @param datePicker
      * @return a java.util.Date
      */
-    public static java.util.Date getDateFromDatePicker(DatePicker datePicker){
+    public static String getDateFromDatePicker(DatePicker datePicker){
         int day = datePicker.getDayOfMonth();
         int month = datePicker.getMonth();
-        int year =  datePicker.getYear();
-
+        //int year =  datePicker.getYear();
+        SimpleDateFormat df = new SimpleDateFormat("dd-MMM");
         Calendar calendar = Calendar.getInstance();
-        calendar.set(year, month, day);
+        calendar.set( 0, month, day);
 
-        return calendar.getTime();
+        return df.format(calendar.getTimeInMillis());
+        //return calendar.getTime();
     }
 
     public void viewAmount(View view) {
-        /*Button calculate = findViewById(R.id.button6);
-        calculate.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
 
-
-                Intent intent = new Intent(BookingDetails.this, Amount.class);
-                startActivity(intent);
-
-            }
-        });*/
         Intent myIntent = new Intent(BookingDetails.this, Amount.class);
         myIntent.putExtra("HOTEL_NAME",hotelName);
         myIntent.putExtra("BASE_PRICE",basePrice);

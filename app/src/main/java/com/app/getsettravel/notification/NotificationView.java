@@ -1,7 +1,9 @@
-package com.app.getsettravel;
+package com.app.getsettravel.notification;
 
 import android.app.Activity;
 import android.os.Bundle;
+
+import com.app.getsettravel.R;
 
 public class NotificationView extends Activity {
     @Override

@@ -28,7 +28,7 @@ public class BookingList extends AppCompatActivity {
     SQLiteDatabase mDatabase;
     ListView listViewBookings;
     BookingAdapter adapter;
-    Button b1;
+   //Button b1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,20 +75,20 @@ public class BookingList extends AppCompatActivity {
                 bookingList.add(new ModelPayment(
                         cursorBookings.getInt(0),
                         cursorBookings.getInt(1),
-                        cursorBookings.getInt(2),
-                        cursorBookings.getInt(3),
+                        cursorBookings.getString(2),
+                        cursorBookings.getString(3),
                         cursorBookings.getInt(4),
-                        cursorBookings.getInt(5),
-                        cursorBookings.getInt(6),
-                        cursorBookings.getString(7),
-                        cursorBookings.getString(8),
+                        cursorBookings.getString(5),
+                        cursorBookings.getString(6),
+                        cursorBookings.getInt(7),
+                        cursorBookings.getFloat(8),
                         cursorBookings.getString(9),
-                        cursorBookings.getString(10),
-                        cursorBookings.getString(11),
-                        cursorBookings.getString(12),
+                        cursorBookings.getInt(10),
+                        cursorBookings.getInt(11),
+                        cursorBookings.getInt(12),
                         cursorBookings.getString(13),
                        // cursorBookings.getString(14),
-                        cursorBookings.getFloat(14)
+                        cursorBookings.getString(14)
                 ));
             } while (cursorBookings.moveToNext());
         }
@@ -112,8 +112,8 @@ public class BookingList extends AppCompatActivity {
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "@string/CHANNEL_ID")
                 .setSmallIcon(R.drawable.debitcard)
-                .setContentTitle("Payment Validated!")
-                .setContentText("Your payment details have been validated and the payment has been successful. Enjoy your vacation. Tap here to give feedback. Thank you.")
+                .setContentTitle("Payment Validated. Happy travelling!")
+                .setContentText("Tap here to give a feedback.")
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                 .setContentIntent(pendingIntent)
                 .setAutoCancel(true);

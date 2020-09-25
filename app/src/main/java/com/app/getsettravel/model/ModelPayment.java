@@ -6,24 +6,24 @@ public class ModelPayment {
     String checkInTime, roomType, checkInDate, hotelName,  CardNumber, CardHolder, PaymentDate; //Amount,
     Float bookingCost;
 
-    public ModelPayment(Integer bookingId, Integer customerId, Integer noOfRooms, Integer noOfNights, Integer securityNumber, Integer month, Integer year,
-                        String checkInTime, String roomType, String checkInDate, String hotelName, String cardNumber, String cardHolder, String paymentDate, Float bookingCost) {
+    public ModelPayment(Integer bookingId, Integer customerId, String hotelName, String roomType, Integer noOfRooms, String checkInDate, String checkInTime, Integer noOfNights, Float bookingCost, String cardNumber, Integer month, Integer year,
+                        Integer securityNumber, String cardHolder, String paymentDate) {
         this.bookingId = bookingId;
         this.customerId = customerId;
+        this.hotelName = hotelName;
+        this.roomType = roomType;
         this.noOfRooms = noOfRooms;
+        this.checkInDate = checkInDate;
+        this.checkInTime = checkInTime;
         this.noOfNights = noOfNights;
-        SecurityNumber = securityNumber;
+        this.bookingCost = bookingCost;
+        CardNumber = cardNumber;
         Month = month;
         Year = year;
-        this.checkInTime = checkInTime;
-        this.roomType = roomType;
-        this.checkInDate = checkInDate;
-        this.hotelName = hotelName;
-       // Amount = amount;
-        CardNumber = cardNumber;
+        SecurityNumber = securityNumber;
         CardHolder = cardHolder;
         PaymentDate = paymentDate;
-        this.bookingCost = bookingCost;
+       // Amount = amount;
     }
 
     public Integer getBookingId() {
@@ -113,14 +113,6 @@ public class ModelPayment {
     public void setHotelName(String hotelName) {
         this.hotelName = hotelName;
     }
-
-  /*  public String getAmount() {
-        return Amount;
-    }
-
-    public void setAmount(String amount) {
-        Amount = amount;
-    } */
 
     public String getCardNumber() {
         return CardNumber;

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/AdminTheme">
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/adminViewBookingId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp"
+            android:text="Booking ID: 77"
+            android:textColor="#ffffff"/>
+        <TextView
+            android:id="@+id/adminViewUserId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="User ID: 21"
+            android:textColor="#ffffff"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/adminViewHotelName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp"
+            android:text="Hotel: Amaya, Pasikudha"
+            android:textColor="#ffffff"/>
+        <TextView
+            android:id="@+id/adminViewRooms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Family Rooms: 3"
+            android:textColor="#ffffff"/>
+        <TextView
+            android:id="@+id/adminViewCheckIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Check in: 24-Nov | 6.00 p.m"
+            android:textColor="#ffffff"/>
+        <TextView
+            android:id="@+id/adminViewNoNights"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Nights: 2"
+            android:textColor="#ffffff"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/adminViewAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:text="LKR 54000.00"
+            android:textColor="#ffffff"/>
+        <TextView
+            android:id="@+id/adminViewCardNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Card no: 112233445"
+            android:textColor="#ffffff"/>
+        <TextView
+        android:id="@+id/adminViewMonthYear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="MM: 7 , YY: 2021"
+            android:textColor="#ffffff"/>
+        <TextView
+        android:id="@+id/adminViewSecurityNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Security: 123"
+            android:textColor="#ffffff"/>
+        <TextView
+            android:id="@+id/adminViewCardHolder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="R.T.R Jayasekara"
+            android:textColor="#ffffff"/>
+
+    </LinearLayout>
+
+</LinearLayout>

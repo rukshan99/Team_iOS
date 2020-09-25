@@ -47,16 +47,18 @@ public class BookingAdapter extends ArrayAdapter<ModelPayment> {
 
 
         //getting views
-        TextView textViewHotel = view.findViewById(R.id.textViewHotel);
-        TextView textViewRoomType = view.findViewById(R.id.textViewRoomType);
-        TextView textViewAmount = view.findViewById(R.id.textViewAmount);
-        TextView textViewBookingDate = view.findViewById(R.id.textViewBookingDate);
+        TextView textViewHotel = view.findViewById(R.id.textViewHoteltextViewHotel);
+        TextView textViewRoomType = view.findViewById(R.id.textViewRoomTypetextViewRoomType);
+        TextView textViewAmount = view.findViewById(R.id.textViewAmounttextViewAmount);
+        TextView textViewBookingDate = view.findViewById(R.id.textViewBookingDatetextViewBookingDate);
+
 
         //adding data to views
-        textViewHotel.setText(booking.getHotelName());
-        textViewRoomType.setText(booking.getRoomType());
-        textViewAmount.setText(String.valueOf(booking.getBookingCost()));
-        textViewBookingDate.setText(booking.getPaymentDate());
+        textViewHotel.setText("Hotel: "+booking.getHotelName());
+        textViewRoomType.setText(booking.getNoOfRooms()+" "+booking.getRoomType()+" Room(s)");
+        textViewAmount.setText("LKR "+ booking.getBookingCost()+"0");
+        textViewBookingDate.setText("Check in: "+ booking.getCheckInDate() + " | " + booking.getCheckInTime());
+
 
         //we will use these buttons for update and delete operation
         Button buttonDelete = view.findViewById(R.id.buttonDeletePayment);
@@ -180,20 +182,20 @@ public class BookingAdapter extends ArrayAdapter<ModelPayment> {
                 BookingList.add(new ModelPayment(
                         cursorBookings.getInt(0),
                         cursorBookings.getInt(1),
-                        cursorBookings.getInt(2),
-                        cursorBookings.getInt(3),
+                        cursorBookings.getString(2),
+                        cursorBookings.getString(3),
                         cursorBookings.getInt(4),
-                        cursorBookings.getInt(5),
-                        cursorBookings.getInt(6),
-                        cursorBookings.getString(7),
-                        cursorBookings.getString(8),
+                        cursorBookings.getString(5),
+                        cursorBookings.getString(6),
+                        cursorBookings.getInt(7),
+                        cursorBookings.getFloat(8),
                         cursorBookings.getString(9),
-                        cursorBookings.getString(10),
-                        cursorBookings.getString(11),
-                        cursorBookings.getString(12),
+                        cursorBookings.getInt(10),
+                        cursorBookings.getInt(11),
+                        cursorBookings.getInt(12),
                         cursorBookings.getString(13),
                        // cursorBookings.getString(14),
-                        cursorBookings.getFloat(14)
+                        cursorBookings.getString(14)
                 ));
             } while (cursorBookings.moveToNext());
         }

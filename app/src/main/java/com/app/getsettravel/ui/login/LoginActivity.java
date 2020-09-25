@@ -23,7 +23,9 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.app.getsettravel.AdminDashBoard;
 import com.app.getsettravel.ContactUs;
+import com.app.getsettravel.Index;
 import com.app.getsettravel.R;
 import com.app.getsettravel.home;
 import com.app.getsettravel.ui.login.LoginViewModel;
@@ -130,5 +132,10 @@ public class LoginActivity extends AppCompatActivity {
 
     private void showLoginFailed(@StringRes Integer errorString) {
         Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show();
+    }
+
+    public void clickAdminButton(View view) {
+        Intent myIntent = new Intent(LoginActivity.this, AdminDashBoard.class);
+        LoginActivity.this.startActivity(myIntent);
     }
 }

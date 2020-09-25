@@ -2,6 +2,7 @@ package com.app.getsettravel;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -44,11 +45,11 @@ public class PaymentDetails extends AppCompatActivity implements View.OnClickLis
         /***
          *
          * Assigning the values added from the payment details form to variables***/
-        cardNumber = (TextInputEditText)findViewById(R.id.textInputEditText);
-        month = (TextInputEditText)findViewById(R.id.editText2);
-        year = (TextInputEditText)findViewById(R.id.editText3);
-        securityNumber = (TextInputEditText)findViewById(R.id.editText4);
-        cardHolderName = (TextInputEditText)findViewById(R.id.editText5);
+        cardNumber = (TextInputEditText)findViewById(R.id.textInputEditTextCardNumber);
+        month = (TextInputEditText)findViewById(R.id.textInputEditTextMonth);
+        year = (TextInputEditText)findViewById(R.id.textInputEditTextYear);
+        securityNumber = (TextInputEditText)findViewById(R.id.textInputEditTextSecurityNumber);
+        cardHolderName = (TextInputEditText)findViewById(R.id.textInputEditTextCardHolderName);
 
         findViewById(R.id.button).setOnClickListener(this);
 
@@ -70,17 +71,17 @@ public class PaymentDetails extends AppCompatActivity implements View.OnClickLis
 
         //getting the current time for payment date
         Calendar cal = Calendar.getInstance();
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
+        @SuppressLint("SimpleDateFormat") SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
         String paymentDate = sdf.format(cal.getTime());
 
         createBookingDetailsTable();
 
         String insertSQL = "INSERT INTO bookings \n" +
-                "(RoomType, NoOfRooms, CheckInDate, CheckInTime, NoOfNights, Amount, CardNumber, Month, Year, SecurityNumber, CardHolder, PaymentDate)\n" +
+                "(Hotel, RoomType, NoOfRooms, CheckInDate, CheckInTime, NoOfNights, Amount, CardNumber, Month, Year, SecurityNumber, CardHolder, PaymentDate)\n" +
                 "VALUES \n" +
-                "(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+                "(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
 
-        mDatabase.execSQL(insertSQL, new String[]{roomType, String.valueOf(noOfRooms), checkInDate, checkInTime, String.valueOf(noOfNights), String.valueOf(bookingCost),
+        mDatabase.execSQL(insertSQL, new String[]{hotelName, roomType, String.valueOf(noOfRooms), checkInDate, checkInTime, String.valueOf(noOfNights), String.valueOf(bookingCost),
                 Card_number, Month, Year, Security_number, Card_Holder, paymentDate});
 
         Toast.makeText(this, "Booking and Payment details Saved!", Toast.LENGTH_SHORT).show();
@@ -91,12 +92,12 @@ public class PaymentDetails extends AppCompatActivity implements View.OnClickLis
                 "CREATE TABLE IF NOT EXISTS bookings (\n" +
                         "    BookingId INTEGER NOT NULL CONSTRAINT bookings_pk PRIMARY KEY AUTOINCREMENT,\n" +
                         "    CustomerID integer,\n" +
-                        "    Hotel varchar(200) ,\n" +
+                        "    Hotel varchar(200) NOT NULL,\n" +
                         "    RoomType varchar(200) NOT NULL,\n" +
-                        "    NoOfRooms int NOT NULL,\n" +
+                        "    NoOfRooms integer NOT NULL,\n" +
                         "    CheckInDate varchar(200) NOT NULL,\n" +
                         "    CheckInTime varchar(200) NOT NULL,\n" +
-                        "    NoOfNights int NOT NULL,\n" +
+                        "    NoOfNights integer NOT NULL,\n" +
                         "    Amount real NOT NULL,\n" +
                         "    CardNumber varchar(200) NOT NULL,\n" +
                         "    Month varchar(200) NOT NULL,\n" +

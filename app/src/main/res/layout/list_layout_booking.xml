@@ -9,7 +9,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textViewHotel"
+            android:id="@+id/textViewHoteltextViewHotel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
@@ -18,21 +18,21 @@
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
 
         <TextView
-            android:id="@+id/textViewRoomType"
+            android:id="@+id/textViewRoomTypetextViewRoomType"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Double Room"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
 
         <TextView
-            android:id="@+id/textViewAmount"
+            android:id="@+id/textViewAmounttextViewAmount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="RS: 20000.00"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
 
         <TextView
-            android:id="@+id/textViewBookingDate"
+            android:id="@+id/textViewBookingDatetextViewBookingDate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -70,7 +70,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
 
-            android:text="Edit" />
+            android:text="Payment Details" />
 
         <Button
             android:id="@+id/buttonDeletePayment"
