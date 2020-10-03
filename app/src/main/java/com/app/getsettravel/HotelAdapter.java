@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.app.getsettravel.model.Hotel;
+
 import java.util.List;
 
 public class HotelAdapter extends ArrayAdapter<Hotel> {

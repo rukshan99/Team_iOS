@@ -10,7 +10,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/logo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -31,6 +31,10 @@
         <activity android:name=".ResetPassword" />
         <activity android:name=".AddHotel" android:theme="@style/AdminTheme"/>
         <activity android:name=".HotelList" android:theme="@style/AdminTheme"/>
+        <activity android:name=".UpdateHotel" android:theme="@style/AdminTheme"/>
+        <activity android:name=".HotelMoreInfo" android:theme="@style/AdminTheme"/>
+
+
 
         <activity android:name=".Index" >
             <intent-filter>
