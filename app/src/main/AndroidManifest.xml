@@ -29,6 +29,9 @@
         <activity android:name=".EditDetails" />
         <activity android:name=".UserList" android:theme="@style/AdminTheme" />
         <activity android:name=".ResetPassword" />
+        <activity android:name=".AddHotel" android:theme="@style/AdminTheme"/>
+        <activity android:name=".HotelList" android:theme="@style/AdminTheme"/>
+
         <activity android:name=".Index" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
