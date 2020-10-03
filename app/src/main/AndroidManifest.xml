@@ -27,11 +27,8 @@
         <activity android:name=".AboutUs" />
         <activity android:name=".Login" />
         <activity android:name=".EditDetails" />
-        <activity android:name=".UserList" />
+        <activity android:name=".UserList" android:theme="@style/AdminTheme" />
         <activity android:name=".ResetPassword" />
-        <activity
-            android:name=".ui.login.LoginActivity"
-            android:label="@string/title_activity_login" />
         <activity android:name=".Index" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -60,6 +57,12 @@
         <activity android:name=".home" />
         <activity android:name=".Feedback" />
         <activity android:name=".AdminBookingList" android:theme="@style/AdminTheme" />
+        <activity android:name=".FeedbackDetails" android:theme="@style/AdminTheme" />
+        <activity android:name=".PromotionList" android:theme="@style/AdminTheme" />
+        <activity android:name=".AddPromo" android:theme="@style/AdminTheme" />
+        <activity android:name=".UpdatePromo" android:theme="@style/AdminTheme"  />
+
+
     </application>
 
 </manifest>
