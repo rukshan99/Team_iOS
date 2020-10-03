@@ -10,7 +10,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/logo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -29,6 +29,13 @@
         <activity android:name=".EditDetails" />
         <activity android:name=".UserList" android:theme="@style/AdminTheme" />
         <activity android:name=".ResetPassword" />
+        <activity android:name=".AddHotel" android:theme="@style/AdminTheme"/>
+        <activity android:name=".HotelList" android:theme="@style/AdminTheme"/>
+        <activity android:name=".UpdateHotel" android:theme="@style/AdminTheme"/>
+        <activity android:name=".HotelMoreInfo" android:theme="@style/AdminTheme"/>
+
+
+
         <activity android:name=".Index" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -61,6 +68,17 @@
         <activity android:name=".PromotionList" android:theme="@style/AdminTheme" />
         <activity android:name=".AddPromo" android:theme="@style/AdminTheme" />
         <activity android:name=".UpdatePromo" android:theme="@style/AdminTheme"  />
+        <activity android:name=".Anatamaa_Hotel" />
+        <activity android:name=".AnuradhapuraHotel" />
+        <activity android:name=".Aranya_Hotel" />
+        <activity android:name=".GallHotel" />
+        <activity android:name=".Grand_Hotel" />
+        <activity android:name=".Heladive_Hotel" />
+        <activity android:name=".KandyHotel" />
+        <activity android:name=".Location" />
+        <activity android:name=".NuwaraEliyaHotel" />
+        <activity android:name=".Serene_Hotel" />
+        <activity android:name=".TrincoHotel" />
 
 
     </application>

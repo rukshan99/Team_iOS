@@ -24,6 +24,7 @@ public class FeedbackDetails extends AppCompatActivity {
 
     private List<FeedbackV> feedbackVS;
     private Context context;
+    DBHelper dbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +34,8 @@ public class FeedbackDetails extends AppCompatActivity {
 
         listView = findViewById(R.id.listFeedback);
 
-        final DBHelper dbHelper = new DBHelper(context);
+        /*final DBHelper dbHelper = new DBHelper(context);*/
+         dbHelper = new DBHelper(context);
         feedbackVS = new ArrayList<>();
 
         feedbackVS = dbHelper.getAllFeedback();

@@ -33,8 +33,8 @@ public class BookingDetails extends AppCompatActivity {
          *
          * Initializing the values passed from the Hotel page***/
         Intent intent = getIntent();
-        hotelName = "aaa"; //intent.getStringExtra("");
-        basePrice = intent.getFloatExtra("",1000);
+        hotelName = intent.getStringExtra("HOTEL_NAME");
+        basePrice = intent.getFloatExtra("BASE_PRICE",1000);
 
         /***
          *

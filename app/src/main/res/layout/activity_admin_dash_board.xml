@@ -118,6 +118,7 @@
         android:id="@+id/button14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="AdminLogout"
         android:text="Logout"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -142,4 +142,80 @@
     <string name="loginPassword">Password</string>
     <string name="loginName">User Name</string>
 
+
+
+
+
+
+    <string name="tittle1">ADD HOTEL</string>
+    <string name="hotelName">Hotel Name</string>
+    <string name="webSite">WebSite</string>
+    <string name="location">Location</string>
+    <string name="contactPersonName">Contact Person Name</string>
+    <string name="mobileNo">Mobile No</string>
+    <string name="budget">Budget</string>
+    <string name="description">Description</string>
+    <string name="addButton">ADD</string>
+    <string name="name">Name</string>
+    <string name="title2">Select Location</string>
+    <string name="kandy">Kandy</string>
+    <string name="anuradhapura">Anuradhapura</string>
+    <string name="galle">Galle</string>
+    <string name="trincomalee">Trincomalee</string>
+    <string name="nuwaraeliya">Nuwara Eliya</string>
+    <string name="addhotel">ADD Hotel</string>
+    <string name="updatebutton">UPDATE Button</string>
+
+
+    <string name="tit_Anu1">Hotel Heladiv</string>
+    <string name="tx1">Avg. price/night:</string>
+    <string name="tx2">LKR 5,105</string>
+    <string name="btAnu1">check availability</string>
+    <string name="tx3">One of our top picks in Anuradhapura.
+Located in a lush green and serene environment, Hotel Heladiv is located 6 km away from the SLAF Anuradhapura Airport. Free WiFi access is available.</string>
+    <string name="tit_Anu2">Aryana Boutique Hotel</string>
+    <string name="tx4">LKR 13,871</string>
+    <string name="btAnu2">check availability</string>
+    <string name="tx5">Set in Anuradhapura, 6 km from Jaya Sri Maha Bodhi, Aryana Boutique Hotel offers accommodation with a restaurant, free private parking, an outdoor swimming pool and a shared lounge. Great choices for breakfast. Their Eggs Benedict was very tasty and served with fresh fruit</string>
+
+    <string name="tit_Kandy1">Earls Regent Hotel</string>
+    <string name="tx6">LKR 19,871</string>
+    <string name="btKandy1">check availability</string>
+    <string name="tx7">Set in Kandy, 2.4 km from Sri Dalada Maligawa, Serene Kandy provides accommodation with a rooftop pool. The hotel offers a European restaurant and a bar.
+Last booked 3 hours ago</string>
+    <string name="tit_Kandy2">Serene Kandy</string>
+    <string name="tx8">LKR 15,871</string>
+    <string name="btKandy2">check availability</string>
+    <string name="tx9">Located in Kandy, 1.5 km from Sri Dalada Maligawa, Mount Blue Kandy provides accommodation with a restaurant, free private parking, an outdoor swimming pool and a garden.</string>
+
+    <string name="tit_galle1">CozyNest</string>
+    <string name="tx10">LKR 11,871</string>
+    <string name="btGalle1">check availability</string>
+    <string name="tx11">CozyNest is a villa situated in Galle, 700 metres from Galle International Cricket Stadium. The villa is 1 km from Galle Fort.</string>
+    <string name="tit_galle2">Villa Olu</string>
+    <string name="tx12">LKR 12,871</string>
+    <string name="btGalle2">check availability</string>
+    <string name="tx13">Featuring pool views, Villa Olu offers accommodation with an outdoor swimming pool, a fitness centre and a bar, around 9 km from Galle International Cricket Stadium.</string>
+
+    <string name="tit_trinco1">Anantamaa Hotel</string>
+    <string name="tx14">LKR 13,000</string>
+    <string name="btTrinco1">check availability</string>
+    <string name="tx1151">Anantamaa Hotel is tucked away in Trincomalee just steps away from the beach. Enjoy soothing spa treatments at the wellness centre or spend a quiet afternoon relaxing by the outdoor pool.</string>
+    <string name="tit_trinco2">Amalya Hotel</string>
+    <string name="tx15">LKR 12,500</string>
+    <string name="btTrinco2">check availability</string>
+    <string name="tx16">Anantamaa Hotel is tucked away in Trincomalee just steps away from the beach. Enjoy soothing spa treatments at the wellness centre or spend a quiet afternoon relaxing by the outdoor pool.</string>
+
+    <string name="tit_nuwaraeli1">Galway Heights Hotel</string>
+    <string name="tx17">LKR 12,871</string>
+    <string name="btNuwareliya1">check availability</string>
+    <string name="tx18">Set in Nuwara Eliya, 2.5 km from Gregory Lake, Galway Heights Hotel offers accommodation with a restaurant, free private parking, free bikes and a bar.</string>
+    <string name="tit_nuwaraeli2">Grand Camellia Hotel</string>
+    <string name="tx19">LKR 12,871</string>
+    <string name="btNuwareliya2">check availability</string>
+    <string name="tx20">Featuring a terrace and views of lake, Grand Camellia Hotel is set in Nuwara Eliya, 1.7 km from Gregory Lake.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
 </resources>
