@@ -11,7 +11,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.app.getsettravel.data.UserDBHelper;
+import com.app.getsettravel.Database.UserDBHelper;
 import com.app.getsettravel.model.User;
 
 import java.util.ArrayList;

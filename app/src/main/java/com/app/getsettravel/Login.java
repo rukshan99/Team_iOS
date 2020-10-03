@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.app.getsettravel.data.UserDBHelper;
+import com.app.getsettravel.Database.UserDBHelper;
 
 public class Login extends AppCompatActivity {
 
@@ -20,7 +20,7 @@ public class Login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_login2);
 
         uName = findViewById(R.id.userName1);
         pass = findViewById(R.id.pass1);

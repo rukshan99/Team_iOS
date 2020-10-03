@@ -25,6 +25,10 @@
         <activity android:name=".PaymentDetails" />
         <activity android:name=".AddHotelDetails" />
         <activity android:name=".AboutUs" />
+        <activity android:name=".Login" />
+        <activity android:name=".EditDetails" />
+        <activity android:name=".UserList" />
+        <activity android:name=".ResetPassword" />
         <activity
             android:name=".ui.login.LoginActivity"
             android:label="@string/title_activity_login" />

@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.app.getsettravel.data.UserDBHelper;
+import com.app.getsettravel.Database.UserDBHelper;
 import com.app.getsettravel.model.User;
 
 public class UserAccount extends AppCompatActivity {
@@ -81,7 +81,7 @@ public class UserAccount extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                startActivity(new Intent(UserAccount.this, Login.class));
+                startActivity(new Intent(UserAccount.this, Index.class));
 
 
             }

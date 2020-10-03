@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.app.getsettravel.data.UserDBHelper;
+import com.app.getsettravel.Database.UserDBHelper;
 
 public class Registration extends AppCompatActivity {
 
