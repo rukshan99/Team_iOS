@@ -24,7 +24,7 @@ public class home extends AppCompatActivity {
         home.this.startActivity(myIntent);
     }
     public void clickBookAHotelButton(View view) {
-        Intent myIntent = new Intent(home.this, BookingDetails.class);
+        Intent myIntent = new Intent(home.this, Location.class);
         home.this.startActivity(myIntent);
     }
     public void clickMapButton(View view) {

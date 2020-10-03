@@ -68,6 +68,17 @@
         <activity android:name=".PromotionList" android:theme="@style/AdminTheme" />
         <activity android:name=".AddPromo" android:theme="@style/AdminTheme" />
         <activity android:name=".UpdatePromo" android:theme="@style/AdminTheme"  />
+        <activity android:name=".Anatamaa_Hotel" />
+        <activity android:name=".AnuradhapuraHotel" />
+        <activity android:name=".Aranya_Hotel" />
+        <activity android:name=".GallHotel" />
+        <activity android:name=".Grand_Hotel" />
+        <activity android:name=".Heladive_Hotel" />
+        <activity android:name=".KandyHotel" />
+        <activity android:name=".Location" />
+        <activity android:name=".NuwaraEliyaHotel" />
+        <activity android:name=".Serene_Hotel" />
+        <activity android:name=".TrincoHotel" />
 
 
     </application>

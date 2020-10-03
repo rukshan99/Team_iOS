@@ -24,6 +24,7 @@
         android:id="@+id/btnanu2"
         android:layout_width="399dp"
         android:layout_height="72dp"
+        android:onClick="clickCheckAvailabilityButton"
         android:text="check availability"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
