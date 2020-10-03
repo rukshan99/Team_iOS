@@ -9,21 +9,24 @@
         android:id="@+id/button15"
         android:layout_width="match_parent"
         android:layout_height="64dp"
-        android:textSize="15sp"
-        android:text="Add Promotion Details" />
+        android:onClick="clickAddHPromotionButton"
+        android:text="Add Promotion Details"
+        android:textSize="15sp" />
 
     <Button
         android:id="@+id/button16"
         android:layout_width="match_parent"
         android:layout_height="64dp"
-        android:textSize="15sp"
-        android:text="View Promotion Details" />
+        android:onClick="clickViewPromotionsButton"
+        android:text="View Promotion Details"
+        android:textSize="15sp" />
 
     <Button
         android:id="@+id/button17"
         android:layout_width="match_parent"
         android:layout_height="64dp"
-        android:textSize="15sp"
-        android:text="View Feedbacks" />
+        android:onClick="clickViewFeedbacksButton"
+        android:text="View Feedbacks"
+        android:textSize="15sp" />
 
 </LinearLayout>
