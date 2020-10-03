@@ -129,4 +129,17 @@
     <string name="update">UPDATE</string>
     <string name="add">Add Promotion</string>
     <string name="mail">Email</string>
+
+
+    <string name="Phone_Number">Phone Number</string>
+    <string name="Address">Address</string>
+    <string name="Update_User">Edit</string>
+    <string name="Update_details">Update Details</string>
+    <string name="Update">Update</string>
+    <string name="btnDelete">Remove Account</string>
+
+    <string name="login">Log In</string>
+    <string name="loginPassword">Password</string>
+    <string name="loginName">User Name</string>
+
 </resources>

@@ -49,9 +49,7 @@
         android:onClick="clickLoginButton"
         android:text="@string/title_activity_login"
         app:layout_constraintBottom_toTopOf="@+id/button10"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-         />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button10"

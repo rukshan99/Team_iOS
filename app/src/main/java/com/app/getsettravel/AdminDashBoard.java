@@ -59,11 +59,11 @@ public class AdminDashBoard extends AppCompatActivity {
         AdminDashBoard.this.startActivity(myIntent);
     }
     public void clickViewPromotionsButton(View view) {
-        Intent myIntent = new Intent(AdminDashBoard.this, AddHotelDetails.class);
+        Intent myIntent = new Intent(AdminDashBoard.this, PromotionList.class);
         AdminDashBoard.this.startActivity(myIntent);
     }
     public void clickViewFeedbacksButton(View view) {
-        Intent myIntent = new Intent(AdminDashBoard.this, AddHotelDetails.class);
+        Intent myIntent = new Intent(AdminDashBoard.this, FeedbackDetails.class);
         AdminDashBoard.this.startActivity(myIntent);
     }
 
@@ -71,4 +71,11 @@ public class AdminDashBoard extends AppCompatActivity {
         Intent myIntent = new Intent(AdminDashBoard.this, AdminBookingList.class);
         AdminDashBoard.this.startActivity(myIntent);
     }
+
+    public void clickUserDetailsButton(View view) {
+
+        startActivity(new Intent(AdminDashBoard.this, UserList.class));
+
+    }
+
 }

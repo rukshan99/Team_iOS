@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.app.getsettravel.ui.login.LoginActivity;
+
 
 public class Index extends AppCompatActivity {
 
@@ -16,11 +16,11 @@ public class Index extends AppCompatActivity {
         setContentView(R.layout.activity_index);
     }
     public void clickLoginButton(View view) {
-        Intent myIntent = new Intent(Index.this, LoginActivity.class);
+        Intent myIntent = new Intent(Index.this, Login.class);
         Index.this.startActivity(myIntent);
     }
     public void clickRegisterButton(View view) {
-        Intent myIntent = new Intent(Index.this, home.class);
+        Intent myIntent = new Intent(Index.this, Registration.class);
         Index.this.startActivity(myIntent);
     }
     public void clickAboutUsButton(View view){
