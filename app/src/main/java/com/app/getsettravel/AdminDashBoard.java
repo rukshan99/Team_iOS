@@ -59,4 +59,11 @@ public class AdminDashBoard extends AppCompatActivity {
         Intent myIntent = new Intent(AdminDashBoard.this, AdminBookingList.class);
         AdminDashBoard.this.startActivity(myIntent);
     }
+
+    public void clickUserDetailsButton(View view) {
+
+        startActivity(new Intent(AdminDashBoard.this, UserList.class));
+
+    }
+
 }

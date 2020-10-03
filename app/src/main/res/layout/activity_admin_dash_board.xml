@@ -24,6 +24,7 @@
         android:id="@+id/button2"
         android:layout_width="263dp"
         android:layout_height="72dp"
+        android:onClick="clickUserDetailsButton"
         android:text="User Details"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
