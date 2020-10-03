@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditDetails">
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Update_details"
+            android:textColor="#717171"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.134" />
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="230dp"
+            android:layout_height="42dp"
+            android:ems="10"
+            android:hint="@string/Phone_Number"
+            android:inputType="phone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.519"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.634" />
+
+        <EditText
+            android:id="@+id/uEmail"
+            android:layout_width="230dp"
+            android:layout_height="42dp"
+            android:ems="10"
+            android:hint="@string/Email"
+            android:inputType="textEmailAddress"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.519"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.338" />
+
+        <EditText
+            android:id="@+id/pass"
+            android:layout_width="230dp"
+            android:layout_height="42dp"
+            android:ems="10"
+            android:hint="@string/Password"
+            android:inputType="textPassword"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.519"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.432" />
+
+        <EditText
+            android:id="@+id/address"
+            android:layout_width="230dp"
+            android:layout_height="42dp"
+            android:ems="10"
+            android:hint="@string/Address"
+            android:inputType="textPostalAddress"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.519"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.531" />
+
+        <Button
+            android:id="@+id/buttonUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Update"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.827" />
+
+        <TextView
+            android:id="@+id/uName"
+            android:layout_width="230dp"
+            android:layout_height="42dp"
+            android:hint="@string/User_Name"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.519"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.243" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
