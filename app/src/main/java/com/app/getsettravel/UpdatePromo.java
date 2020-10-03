@@ -16,7 +16,7 @@ public class UpdatePromo extends AppCompatActivity {
 
     EditText etCode,etType,etOffer,etDes;
     Button btupdate;
-    private DBHelper dbHelper;
+    DBHelper dbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +24,7 @@ public class UpdatePromo extends AppCompatActivity {
         setContentView(R.layout.activity_update_promo);
         dbHelper = new DBHelper(UpdatePromo.this);
 
-        setContentView(R.layout.activity_promotion);
+        /*setContentView(R.layout.activity_promotion);*/
         etCode = (EditText) findViewById(R.id.etCode);
         etType = (EditText) findViewById(R.id.etType);
         etOffer = (EditText) findViewById(R.id.etOffer);
