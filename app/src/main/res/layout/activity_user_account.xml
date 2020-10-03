@@ -6,47 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".UserAccount">
 
-    <Button
-        android:id="@+id/buttonFogotPass"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="145dp"
-        android:layout_height="57dp"
-
-        android:text="@string/Button_Edit_Password"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.152"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.954" />
-
-    <Button
-        android:id="@+id/buttonEditUser"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="145dp"
-        android:layout_height="57dp"
-
-        android:text="@string/Update_User"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.152"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.843" />
-
-    <Button
-        android:id="@+id/buttonSignOut"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="145dp"
-        android:layout_height="57dp"
-
-        android:text="@string/Button_SignOut"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.803"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.843" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -122,6 +81,48 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.954" />
+
+    <Button
+        android:id="@+id/buttonFogotPass"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="145dp"
+        android:layout_height="57dp"
+
+        android:text="@string/Button_Edit_Password"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.152"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.954" />
+
+    <Button
+        android:id="@+id/buttonEditUser"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="145dp"
+        android:layout_height="57dp"
+
+        android:text="@string/Update_User"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.152"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.843" />
+
+    <Button
+        android:id="@+id/buttonSignOut"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="145dp"
+        android:layout_height="57dp"
+
+        android:text="@string/Button_SignOut"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.803"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.843" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
