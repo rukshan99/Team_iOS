@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.app.getsettravel.Database.Hotel_DBHelper;
+import com.app.getsettravel.model.Hotel;
 
 
 public class AddHotel extends AppCompatActivity {

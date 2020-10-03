@@ -6,6 +6,7 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.app.getsettravel.Database.Hotel_DBHelper;
+import com.app.getsettravel.model.Hotel;
 
 
 public class HotelMoreInfo extends AppCompatActivity {

@@ -34,8 +34,15 @@ public class DBHelper extends SQLiteOpenHelper {
                         Promotion.Promotions.COLUMN_NAME_PROMOTIONTYPE + " TEXT NOT NULL," +
                         Promotion.Promotions.COLUMN_NAME_OFFER + " TEXT NOT NULL," +
                         Promotion.Promotions.COLUMN_NAME_DESCRIPTION + " TEXT NOT NULL)";
+        String SQL_FEEDBACK_ENTRIES =
+                "CREATE TABLE " + Promotion.Feedbacks.TABLE_NAME + " (" +
+                        Promotion.Feedbacks._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+                        Promotion.Feedbacks.COLUMN_NAME_FEEDCOMMENT + " TEXT," +
+                        Promotion.Feedbacks.COLUMN_NAME_FEEDMAIL + " TEXT )";
 
         sqLiteDatabase.execSQL(SQL_CREATE_ENTRIES);
+        sqLiteDatabase.execSQL(SQL_FEEDBACK_ENTRIES);
+
     }
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {

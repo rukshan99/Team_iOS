@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 import com.app.getsettravel.Database.Hotel_DBHelper;
+import com.app.getsettravel.model.Hotel;
 
 import java.util.ArrayList;
 import java.util.List;

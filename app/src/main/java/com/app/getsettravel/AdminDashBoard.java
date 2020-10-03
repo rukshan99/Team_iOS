@@ -83,4 +83,12 @@ public class AdminDashBoard extends AppCompatActivity {
 
     }
 
+    public void AdminLogout(View view) {
+
+        startActivity(new Intent(AdminDashBoard.this, Index.class));
+
+    }
+
+
+
 }
