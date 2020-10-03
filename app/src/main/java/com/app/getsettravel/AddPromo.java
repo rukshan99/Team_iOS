@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.BaseColumns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -24,10 +23,10 @@ public class AddPromo extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_promotion);
-        etCode = (EditText) findViewById(R.id.etCode);
-        etType = (EditText) findViewById(R.id.etType);
-        etOffer = (EditText) findViewById(R.id.etOffer);
-        etDes = (EditText) findViewById(R.id.etDes);
+        etCode = (EditText) findViewById(R.id.uetCode);
+        etType = (EditText) findViewById(R.id.uetType);
+        etOffer = (EditText) findViewById(R.id.uetOffer);
+        etDes = (EditText) findViewById(R.id.uetDes);
         btsub = (Button) findViewById(R.id.btsub);
 
         final DBHelper dbHelper = new DBHelper(this);

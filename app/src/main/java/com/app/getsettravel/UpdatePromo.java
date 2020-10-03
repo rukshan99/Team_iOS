@@ -25,10 +25,10 @@ public class UpdatePromo extends AppCompatActivity {
         dbHelper = new DBHelper(UpdatePromo.this);
 
         setContentView(R.layout.activity_promotion);
-        etCode = (EditText) findViewById(R.id.etCode);
-        etType = (EditText) findViewById(R.id.etType);
-        etOffer = (EditText) findViewById(R.id.etOffer);
-        etDes = (EditText) findViewById(R.id.etDes);
+        etCode = (EditText) findViewById(R.id.uetCode);
+        etType = (EditText) findViewById(R.id.uetType);
+        etOffer = (EditText) findViewById(R.id.uetOffer);
+        etDes = (EditText) findViewById(R.id.uetDes);
         btupdate = (Button) findViewById(R.id.btupdate);
 
         final String id = getIntent().getStringExtra("Id");

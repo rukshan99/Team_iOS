@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UpdatePromo">
+    tools:context=".UpdatePromo"
+    android:theme="@style/AdminTheme">
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="156dp"
         android:layout_height="55dp"
         android:text="@string/text"
-        android:textColor="#100F0F"
+
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -69,7 +70,7 @@
         app:layout_constraintVertical_bias="0.495" />
 
     <EditText
-        android:id="@+id/etCode"
+        android:id="@+id/uetCode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -82,7 +83,7 @@
         app:layout_constraintVertical_bias="0.205" />
 
     <EditText
-        android:id="@+id/etType"
+        android:id="@+id/uetType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -95,7 +96,7 @@
         app:layout_constraintVertical_bias="0.295" />
 
     <EditText
-        android:id="@+id/etDes"
+        android:id="@+id/uetDes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -107,7 +108,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/etOffer"
+        android:id="@+id/uetOffer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"

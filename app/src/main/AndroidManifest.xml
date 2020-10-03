@@ -15,9 +15,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FeedbackDetails"></activity>
-        <activity android:name=".UpdatePromo" />
-        <activity android:name=".PromotionList" />
+        <activity android:name=".FeedbackDetails"
+            android:theme="@style/AdminTheme"></activity>
+        <activity android:name=".UpdatePromo"
+            android:theme="@style/AdminTheme"/>
+        <activity android:name=".PromotionList"
+            android:theme="@style/AdminTheme"/>
+        <activity android:name=".AddPromo"
+            android:theme="@style/AdminTheme"/>
         <activity android:name=".Database.Promotion" />
         <activity
             android:name=".AdminDashBoard"
