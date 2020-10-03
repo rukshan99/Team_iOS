@@ -113,4 +113,20 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+
+
+    <string name="SendFeedback">Send us your feedback!</string>
+    <string name="line1">Rate your experience with Get Set Travel</string>
+    <string name="line2">We always want to improve. Do you have any suggestions?</string>
+
+    <string name="Getsettravel">Get Set Travel</string>
+    <string name="text">Promotion</string>
+    <string name="t1">Promotion Code</string>
+    <string name="t2">Promotion Type</string>
+    <string name="t3">Offer</string>
+    <string name="t4">Description</string>
+    <string name="s1">SUBMIT</string>
+    <string name="update">UPDATE</string>
+    <string name="add">Add Promotion</string>
+    <string name="mail">Email</string>
 </resources>
