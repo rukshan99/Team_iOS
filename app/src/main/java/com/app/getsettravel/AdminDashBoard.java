@@ -51,7 +51,12 @@ public class AdminDashBoard extends AppCompatActivity {
     }
 
     public void clickAddHotelDetailsButton(View view) {
-        Intent myIntent = new Intent(AdminDashBoard.this, AddHotelDetails.class);
+        Intent myIntent = new Intent(AdminDashBoard.this, AddHotel.class);
+        AdminDashBoard.this.startActivity(myIntent);
+    }
+
+    public void clickViewHotelDetailsButton(View view) {
+        Intent myIntent = new Intent(AdminDashBoard.this, HotelList.class);
         AdminDashBoard.this.startActivity(myIntent);
     }
     public void clickAddHPromotionButton(View view) {

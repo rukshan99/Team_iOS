@@ -17,6 +17,7 @@
         android:id="@+id/button16"
         android:layout_width="match_parent"
         android:layout_height="64dp"
-        android:textSize="15sp"
-        android:text="View Hotel Details" />
+        android:onClick="clickViewHotelDetailsButton"
+        android:text="View Hotel Details"
+        android:textSize="15sp" />
 </LinearLayout>
