@@ -37,7 +37,7 @@ public class Amount extends AppCompatActivity {
         cost.setText("LKR "+ calculateBookingCost(basePrice, roomType, noOfRooms, noOfNights));
     }
 
-    public float calculateBookingCost(Float base_Price, String room_Type, Integer noOf_Rooms, Integer noOf_Nights){
+    public float calculateBookingCost(float base_Price, String room_Type, Integer noOf_Rooms, Integer noOf_Nights){
 
         int roomValueMultiplier = 1;
 
