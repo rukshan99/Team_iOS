@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jdbcDataAdapter class="net.sf.jasperreports.data.jdbc.JdbcDataAdapterImpl"><name>RMSdatabase</name><driver>com.mysql.jdbc.Driver</driver><username>root</username><password></password><savePassword>true</savePassword><url>jdbc:mysql://localhost/restaurant_management_system</url><database></database><serverAddress></serverAddress><classpath>D:\oop_bkp\mysql-connector-java-5.1.48-bin.jar</classpath></jdbcDataAdapter>

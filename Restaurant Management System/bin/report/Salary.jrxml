@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.14.0.final using JasperReports Library version 6.14.0-2ab0d8625be255bf609c78e1181801213e51db8f  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Salary" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isSummaryNewPage="true" isSummaryWithPageHeaderAndFooter="true" uuid="aee95c28-184a-489b-b487-6236025fca8f">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="src\report\RMSdatabase.xml"/>
+	<queryString language="SQL">
+		<![CDATA[select e.id,e.fname,e.lname,s.salary,s.hours,s.emonth,d.risk,d.other,d.advance,d.loan from salary s,employee_details e ,salarydetail d
+where e.id = s.eid AND s.eid = d.id]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee_details"/>
+	</field>
+	<field name="fname" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="fname"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee_details"/>
+	</field>
+	<field name="lname" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="lname"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee_details"/>
+	</field>
+	<field name="salary" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="salary"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+	</field>
+	<field name="hours" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="hours"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+	</field>
+	<field name="emonth" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="emonth"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+	</field>
+	<field name="risk" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="risk"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="salarydetail"/>
+	</field>
+	<field name="other" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="other"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="salarydetail"/>
+	</field>
+	<field name="advance" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="advance"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="salarydetail"/>
+	</field>
+	<field name="loan" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="loan"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="salarydetail"/>
+	</field>
+	<variable name="Tot_sal" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{salary}+$F{risk}+$F{other}+($F{salary}*8/100)]]></variableExpression>
+	</variable>
+	<variable name="EPF" class="java.lang.Double">
+		<variableExpression><![CDATA[$F{salary}*8/100]]></variableExpression>
+	</variable>
+	<variable name="tot_ded" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{advance}+$F{loan}+($F{salary}*8/100)]]></variableExpression>
+	</variable>
+	<variable name="balanceSalry" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[($F{salary}+$F{risk}+$F{other}+($F{salary}*8/100))-($F{advance}+$F{loan}+($F{salary}*8/100))]]></variableExpression>
+	</variable>
+	<group name="Group1" isStartNewPage="true" isResetPageNumber="true" isReprintHeaderOnEachPage="true">
+		<groupExpression><![CDATA[$F{id}]]></groupExpression>
+		<groupHeader>
+			<band height="40">
+				<staticText>
+					<reportElement x="0" y="10" width="60" height="30" uuid="49052175-915b-490b-bd57-ed4f75e4327b"/>
+					<textElement>
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Name :]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="60" y="10" width="80" height="30" uuid="8f574911-0996-4194-8c20-ceb5c433b113">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="56f42376-2a34-4779-b48a-1668162bb297"/>
+					</reportElement>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{fname}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="140" y="10" width="100" height="30" uuid="f1952fae-e6e8-4e08-8280-a1abd088edf6">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="19e4b044-cecf-4bdb-b4ae-f4b84c0f7ebe"/>
+					</reportElement>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{lname}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="380" y="10" width="60" height="30" uuid="21e80d11-798c-40f8-99fd-367993e450d3"/>
+					<textElement textAlignment="Center">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Emp ID :]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="440" y="10" width="100" height="30" uuid="758f5fe9-13df-4977-be52-39c3b5feca20">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cb6071fb-6dce-4532-b067-9b9bb0c2e3e0"/>
+					</reportElement>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="151">
+				<line>
+					<reportElement x="0" y="150" width="555" height="1" uuid="51820d02-c7fb-406d-8059-ec8172f245b2">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+				</line>
+				<staticText>
+					<reportElement x="180" y="50" width="110" height="30" uuid="1997d309-4f55-4b0c-97fc-1c44326a6631"/>
+					<textElement>
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[EPF 12% :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="180" y="80" width="110" height="30" uuid="d5482c11-9b64-46f1-9b30-6a6652350971"/>
+					<textElement>
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[EPF 20% :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="180" y="110" width="110" height="30" uuid="09923ff3-40e9-4f58-89ae-671c9f48bfbe"/>
+					<textElement>
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ETF 3% :]]></text>
+				</staticText>
+				<line>
+					<reportElement x="0" y="40" width="555" height="1" uuid="11fc21c2-6279-4c3d-8ae9-97acc134f77c">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+				</line>
+				<staticText>
+					<reportElement x="0" y="-1" width="140" height="30" uuid="e8380ae5-5414-494e-93c7-351d1b49b034"/>
+					<textElement>
+						<font size="16" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Balance Salary]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="290" y="50" width="100" height="30" uuid="54dcb924-095e-4168-840b-f8002b64bb18"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{salary}*12/100]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="290" y="80" width="100" height="30" uuid="4f69714f-c6a0-4c6b-8676-997141a7f202"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{salary}*20/100]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="290" y="110" width="100" height="30" uuid="b8fc03fa-0306-499f-828a-17b2318bff44"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{salary}*3/100]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="380" y="-1" width="140" height="30" uuid="c0f9167f-70bd-47e2-8f70-9f3ce8b66a20"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{balanceSalry}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="91" splitType="Stretch">
+			<staticText>
+				<reportElement x="120" y="12" width="280" height="38" uuid="62329e1d-47ce-4f5a-ba4f-e09c27eecc1f"/>
+				<textElement>
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[Sea Breeze Restaurant  ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="60" width="170" height="31" uuid="ad544b94-d290-4e5a-b66e-36c2ae31ea45"/>
+				<textElement>
+					<font size="18" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Salary Particulars]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="400" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="50" height="30" uuid="0fd99df3-fc7f-4102-b8d4-4a2dc68fb725"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Month :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="30" width="110" height="30" uuid="80a064e2-0fe9-4fcd-a5ff-4daaed2a5f67"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Basic Salary :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="280" y="30" width="100" height="30" uuid="f4df1631-731d-4c33-9b65-eb1196baee05">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bd161033-1e41-4e27-a8ca-2bde73b858a1"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{salary}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="60" width="110" height="30" uuid="9115bc54-ba33-4341-bfb1-9d0e41500a5a"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Risk Incentive :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="90" width="110" height="30" uuid="da1b18ca-1113-4ab3-9980-faf1d2eb7768"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EPF Incentive :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="120" width="110" height="30" uuid="250a2555-e185-4627-a7da-953c89fbbd75"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Other Incentive : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="160" width="100" height="30" uuid="a082c283-5969-4d74-ac1e-1a7183db96bd"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Salary ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="200" width="110" height="30" uuid="47cdc938-574e-4100-97ca-542ecdc65261"/>
+				<textElement>
+					<font size="16" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Deduction]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="230" width="110" height="30" uuid="84214ca5-8fee-4052-a4b5-cc7892d5c7dd"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Advance :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="260" width="110" height="30" uuid="4a9664c2-4644-4d57-a728-1d832edaf3ce"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Loan :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="290" width="110" height="30" uuid="da575716-fbc3-4b33-930d-f96a46ce3a6f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EPF 8% :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="340" width="140" height="30" uuid="3c0e6dbd-20d4-4576-841d-39629628e7fc"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Deduction]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="280" y="60" width="100" height="30" uuid="0e0d8233-7307-4f2c-8c31-c3851b5e09d0"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{risk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="120" width="100" height="30" uuid="caa2cd72-e047-459c-9fc4-6615c6781906"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{other}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="230" width="100" height="30" uuid="022af777-ec61-4d7e-9e3d-4b1a6d14ca9f"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{advance}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="260" width="100" height="30" uuid="c6e2435e-ae2e-4b06-9196-bdf5eab4f413"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{loan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="340" width="100" height="30" uuid="a7451b70-6519-4a1c-934b-4187d4e2f0dc"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{tot_ded}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="160" width="100" height="30" uuid="5ea73b16-d408-48bd-8afe-8a1abca1121a"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{Tot_sal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="90" width="100" height="30" uuid="2ed9f708-ae15-4008-9727-37cfcc687494"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{EPF}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="290" width="100" height="30" uuid="d063a841-2270-4763-ba72-566748860693"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{EPF}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="0" width="100" height="30" uuid="02d59367-56f8-4f3a-ba6e-c3c9345c4caf"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{emonth}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="118" splitType="Stretch">
+			<staticText>
+				<reportElement x="80" y="20" width="408" height="30" uuid="66476192-1fc0-4c38-b668-7f0803c148a8"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Certify that I have received the above mentioned salary]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="80" width="100" height="20" uuid="41ab43ac-7c14-4c56-a8e4-1a0b4f076b23"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Signature]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="80" width="100" height="20" uuid="64493bb4-9326-4ac7-bb46-8860f0fec90c"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+</jasperReport>
